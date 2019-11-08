@@ -1,6 +1,12 @@
 {
   "type": "object",
-  "required": [],
+  "required": [
+    "title",
+    "description",
+    "year",
+    "authors",
+    "root"
+  ],
   "properties": {
     "title": {
       "type": "string"
@@ -13,136 +19,42 @@
     },
     "root": {
       "type": "object",
-      "required": [],
+      "$id": "#GladStoriesEngine.Page",
       "properties": {
         "endType": {
-          "type": "string"
-        },
-        "next": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "required": [],
-            "properties": {
-              "text": {
-                "type": "string"
-              },
-              "nextPage": {
-                "type": "object",
-                "required": [],
-                "properties": {
-                  "endType": {
-                    "type": "string"
-                  },
-                  "next": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "required": [],
-                      "properties": {
-                        "text": {
-                          "type": "string"
-                        },
-                        "nextPage": {
-                          "type": "object",
-                          "required": [],
-                          "properties": {
-                            "endType": {
-                              "type": "string"
-                            },
-                            "next": {
-                              "type": "array",
-                              "items": {
-                                "type": "object",
-                                "required": [],
-                                "properties": {
-                                  "text": {
-                                    "type": "string"
-                                  },
-                                  "nextPage": {
-                                    "type": "object",
-                                    "required": [],
-                                    "properties": {
-                                      "endType": {
-                                        "type": "string"
-                                      },
-                                      "next": {
-                                        "type": "array",
-                                        "items": {
-                                          "type": "string"
-                                        }
-                                      },
-                                      "nodes": {
-                                        "type": "array",
-                                        "items": {
-                                          "type": "object",
-                                          "required": [],
-                                          "properties": {
-                                            "text": {
-                                              "type": "string"
-                                            },
-                                            "imageType": {
-                                              "type": "string"
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            },
-                            "nodes": {
-                              "type": "array",
-                              "items": {
-                                "type": "object",
-                                "required": [],
-                                "properties": {
-                                  "text": {
-                                    "type": "string"
-                                  },
-                                  "imageType": {
-                                    "type": "string"
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "nodes": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "required": [],
-                      "properties": {
-                        "text": {
-                          "type": "string"
-                        },
-                        "imageType": {
-                          "type": "string"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "nodes": {
           "type": "array",
           "items": {
-            "type": "object",
-            "required": [],
+            "$id": "#GladStoriesEngine.Node",
             "properties": {
               "text": {
                 "type": "string"
               },
               "imageType": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        },
+        "next": {
+          "$id": "#GladStoriesEngine.PageNext",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
                 "type": "string"
+              },
+              "nextPage": {
+                "$ref": "#GladStoriesEngine.Page"
               }
             }
           }
