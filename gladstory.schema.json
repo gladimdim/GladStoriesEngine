@@ -1,0 +1,156 @@
+{
+  "type": "object",
+  "required": [],
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "authors": {
+      "type": "string"
+    },
+    "root": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "endType": {
+          "type": "string"
+        },
+        "next": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [],
+            "properties": {
+              "text": {
+                "type": "string"
+              },
+              "nextPage": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "endType": {
+                    "type": "string"
+                  },
+                  "next": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [],
+                      "properties": {
+                        "text": {
+                          "type": "string"
+                        },
+                        "nextPage": {
+                          "type": "object",
+                          "required": [],
+                          "properties": {
+                            "endType": {
+                              "type": "string"
+                            },
+                            "next": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "required": [],
+                                "properties": {
+                                  "text": {
+                                    "type": "string"
+                                  },
+                                  "nextPage": {
+                                    "type": "object",
+                                    "required": [],
+                                    "properties": {
+                                      "endType": {
+                                        "type": "string"
+                                      },
+                                      "next": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "nodes": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "object",
+                                          "required": [],
+                                          "properties": {
+                                            "text": {
+                                              "type": "string"
+                                            },
+                                            "imageType": {
+                                              "type": "string"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "nodes": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "required": [],
+                                "properties": {
+                                  "text": {
+                                    "type": "string"
+                                  },
+                                  "imageType": {
+                                    "type": "string"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "nodes": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [],
+                      "properties": {
+                        "text": {
+                          "type": "string"
+                        },
+                        "imageType": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "nodes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [],
+            "properties": {
+              "text": {
+                "type": "string"
+              },
+              "imageType": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "year": {
+      "type": "number"
+    }
+  }
+}
