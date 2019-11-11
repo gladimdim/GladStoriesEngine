@@ -17,6 +17,31 @@
     "authors": {
       "type": "string"
     },
+    "history": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "imagePath": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    },
     "root": {
       "type": "object",
       "$id": "#GladStoriesEngine.Page",
@@ -24,6 +49,12 @@
         "endType": {
           "type": [
             "string",
+            "null"
+          ]
+        },
+        "currentIndex": {
+          "type": [
+            "number",
             "null"
           ]
         },
@@ -60,6 +91,9 @@
           }
         }
       }
+    },
+    "currentPage": {
+      "$ref": "#GladStoriesEngine.Page"
     },
     "year": {
       "type": "number"
