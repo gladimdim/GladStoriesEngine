@@ -8,7 +8,7 @@ This is a new interactive fiction engine made for the specific purposes:
 - One JSON file contains story used for editor AND the progress of the player.
 - Run on Smartphones.
 
-## Human Readble JSON Data Structure
+## Human Readable JSON Data Structure
 
 The format is intentionally made to be as human eye friendly as possible. Other interactive fiction formats include tons of features, custom scripting, if-else variables, inventory stuff or even have a custom Domain Specific Language (DSL).
 
