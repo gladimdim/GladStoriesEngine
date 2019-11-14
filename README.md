@@ -19,7 +19,7 @@ It has a title, description, authors properties. And it has a first Page, called
 
 The GSE format does absolutely the same: **root** page is where you open the book. Then you read passage by passage, in GSE it is called **node**. Each node may contain image, associate with action described in the text. When you finish the Page, you have to make a decision (if you are still alive in the story ;) ). These decisions are described in **next** array. Each decision has a text, which is shown to the user. And it has a complete next page, which is opened when user selected the option. Then the process of parsing the story continues recursively! User reads the passages of next page, makes **next** choice and then continues reading the referenced **next** Page.
 
-The **GladStoriesEngine** is just a specific JSON format:
+#### The **GladStoriesEngine** is just a specific JSON format
 
 ```json
 {
