@@ -63,12 +63,12 @@ This is the absolutely minimum data required to make a valid **GSE** JSON file w
 - **year** - a year as an integer. Usually tells in what year the story has happened.
 
 ## Root
-**root** is a json of type [**Page**](###Page).
+**root** is a json of type [**Page**](#Page).
 
 ### Page
 - **endType** - defines whether the main hero dies or continues to live when this page is finished. Might be null when there are next pages available. *Currently, GSE supports only "ALIVE" or "DEAD" type ends.*
-- **nodes** - list of [**PageNode**](###PageNode). Contains passages which are shown one-by-one to the user. In canonical runtime user is required to press "Continue" button to get to the next passage.
-- **next** - list of [**PageNext**](###PageNext). Contains a list of options available for the user when the page ends.
+- **nodes** - list of [**PageNode**](#PageNode). Contains passages which are shown one-by-one to the user. In canonical runtime user is required to press "Continue" button to get to the next passage.
+- **next** - list of [**PageNext**](#PageNext). Contains a list of options available for the user when the page ends.
 
 ### PageNode
 - **text** is required and contains a String.
@@ -87,9 +87,9 @@ steppe
 
 ### PageNext
 - **text** - a String. Contains the text of the option in selection, which user can select.
-- **nextPage** - a [**Page**](###Page).
+- **nextPage** - a [**Page**](#Page).
 
-The processing of the JSON is recursive. Every time user selects next option, the runtime replaces currentPage with the [nextPage](##PageNext) and the process continues until the [endType or the Page](###Page) is not null.
+The processing of the JSON is recursive. Every time user selects next option, the runtime replaces currentPage with the [nextPage](#PageNext) and the process continues until the [endType or the Page](#Page) is not null.
 
 ## JSON Schema validators
 This repo contains [gladstory json schema](./gladstory.schema.json). It can be used to verify your JSON structure. The schema contains multiple types which are referenced inside the same schema.
