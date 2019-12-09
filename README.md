@@ -8,6 +8,8 @@ This is a new interactive fiction engine made for the specific purposes:
 - One JSON file contains story used for editor AND the saved progress of the player.
 - Run Editor + Runtime on Smartphones.
 
+## Online editor&runtime: [Loca Deserta Online](https://locadeserta.com/index_en.html)
+
 ## Human Readable JSON Data Structure
 
 The format is intentionally made to be as human eye friendly as possible. Other interactive fiction formats include tons of features, custom scripting, if-else variables, inventory stuff or even have a custom Domain Specific Language (DSL).
