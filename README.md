@@ -106,3 +106,7 @@ You can use online tool [https://www.jsonschemavalidator.net](https://www.jsonsc
 ## Dart
 
 [There is a pub.dev package written in Dart](https://pub.dev/packages/gladstoriesengine). It supports all the features defined above. Follow the example and README.md of the package.
+
+## Smalltalk
+
+The effort to port this engine to the Smalltalk (Pharo) has started and is located here: https://github.com/gladimdim/gladstoriessmalltalk
